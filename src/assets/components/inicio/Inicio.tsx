@@ -1,0 +1,172 @@
+import { Button, Link, Stack, Typography, useMediaQuery } from "@mui/material";
+import LogoLisia from "../../../assets/images/LogoLisiaBocchese.png";
+import BGS1 from "../../../assets/images/BGS1.png";
+
+export default function Inicio() {
+
+    const isTablet = useMediaQuery('(min-width:900px)');
+
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+        e.preventDefault();
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    return (
+        <Stack
+            sx={{
+                backgroundImage: `url(${BGS1})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center bottom',
+            }}
+            height={isTablet ? "80vh" : "70vh"}>
+            <Stack
+
+                width="100%"
+                direction="row"
+                justifyContent={isTablet ? "space-around" : "center"}
+                padding="2rem 1rem 0 1rem"
+            >
+                <Stack>
+                    <img
+                        style={{ width: "250px" }}
+                        src={LogoLisia}
+                        alt="Logo Egret Negócios" />
+                </Stack>
+                <Stack
+                    direction="row"
+                    width="70%"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    display={isTablet ? "" : "none"}
+                >
+
+                    <Link
+                        onClick={(e) => handleScroll(e, 'contato')}
+                        href="#contato"
+                        sx={{
+                            fontFamily: "Cinzel",
+                            fontWeight: "600",
+                            fontSize: "18px",
+                            pb: 1,
+                            color: "#000",
+                            textDecoration: "none",
+                            '&:hover': {
+                                color: "#f59f36",
+                                borderBottom: "1px solid #f59f36",
+                                transition: ".3s ease",
+                            }
+                        }}
+                    >Quem somos</Link>
+                    <Stack height="40px" border="1px solid #f59f36" mr={1} ml={1} ></Stack>
+                    <Link
+                        onClick={(e) => handleScroll(e, 'contato')}
+                        href="#contato"
+                        sx={{
+                            fontFamily: "Cinzel",
+                            fontWeight: "600",
+                            fontSize: "18px",
+                            pb: 1,
+                            color: "#000",
+                            textDecoration: "none",
+                            '&:hover': {
+                                color: "#f59f36",
+                                borderBottom: "1px solid #f59f36",
+                                transition: ".3s ease",
+                            }
+                        }}
+                    >Áreas de atuação</Link>
+                    <Stack height="40px" border="1px solid #f59f36" mr={1} ml={1} ></Stack>
+                    <Link
+                        onClick={(e) => handleScroll(e, 'contato')}
+                        href="#contato"
+                        sx={{
+                            fontFamily: "Cinzel",
+                            fontWeight: "600",
+                            fontSize: "18px",
+                            pb: 1,
+                            color: "#000",
+                            textDecoration: "none",
+                            '&:hover': {
+                                color: "#f59f36",
+                                borderBottom: "1px solid #f59f36",
+                                transition: ".3s ease",
+                            }
+                        }}
+                    >Contato</Link>
+                    <Stack height="40px" border="1px solid #f59f36" mr={1} ml={1} ></Stack>
+                    <Link
+                        onClick={(e) => handleScroll(e, 'contato')}
+                        href="#contato"
+                        sx={{
+                            fontFamily: "Cinzel",
+                            fontWeight: "600",
+                            fontSize: "18px",
+                            pb: 1,
+                            color: "#000",
+                            textDecoration: "none",
+                            '&:hover': {
+                                color: "#f59f36",
+                                borderBottom: "1px solid #f59f36",
+                                transition: ".3s ease",
+                            }
+                        }}
+                    >Onde estamos</Link>
+                </Stack>
+            </Stack>
+            <Stack
+                height="100%"
+                padding={isTablet ? "6rem 3rem" : "3rem 8px"}
+                direction="column-reverse"
+                alignItems={isTablet ? "flex-start" : "center"}
+            >
+
+                <Button sx={isTablet ? {
+                    width: "250px",
+                    padding: "1rem",
+                    mt: 5,
+                    borderRadius: "8px",
+                    bgcolor: "#f59f36",
+                    color: "#fff",
+                    outline: "1px solid #f59f36",
+                    '&:hover': {
+                        color: "#f59f36",
+                        bgcolor: "#fff"
+                    }
+                } : {
+                    width: "200px",
+                    padding: "8px",
+                    mt: 5,
+                    bgcolor: "#f59f36",
+                    color: "#fff",
+                    outline: "1px solid #f59f36",
+                    '&:hover': {
+                        color: "#f59f36",
+                        bgcolor: "#fff"
+                    }
+                }}>Marque uma consulta</Button>
+
+                <Stack
+                    borderLeft="8px solid #f59f36"
+                    width={isTablet ? "700px" : "100%"}
+                >
+                    <Typography
+                        fontFamily="Cinzel"
+                        fontSize={isTablet ? "52px" : "24px"}
+                        ml={2}
+                        fontWeight="500"
+                        color="#000"
+                    >
+                        Soluções jurídicas com técnica dedicação e acolhimento!
+                    </Typography>
+
+                </Stack>
+
+
+
+            </Stack>
+        </Stack>
+    );
+}
