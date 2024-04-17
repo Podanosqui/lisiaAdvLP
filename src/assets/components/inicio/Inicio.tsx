@@ -51,7 +51,7 @@ export default function Inicio() {
                             fontWeight: "600",
                             fontSize: "18px",
                             pb: 1,
-                            color: "#000",
+                            color: "#193D5A",
                             textDecoration: "none",
                             '&:hover': {
                                 color: "#f59f36",
@@ -60,7 +60,7 @@ export default function Inicio() {
                             }
                         }}
                     >Quem somos</Link>
-                    <Stack height="40px" border="1px solid #f59f36" mr={1} ml={1} ></Stack>
+                    <Stack height="40px" border="1px solid #193D5A" mr={1} ml={1} ></Stack>
                     <Link
                         onClick={(e) => handleScroll(e, 'contato')}
                         href="#contato"
@@ -69,7 +69,7 @@ export default function Inicio() {
                             fontWeight: "600",
                             fontSize: "18px",
                             pb: 1,
-                            color: "#000",
+                            color: "#193D5A",
                             textDecoration: "none",
                             '&:hover': {
                                 color: "#f59f36",
@@ -78,7 +78,7 @@ export default function Inicio() {
                             }
                         }}
                     >Áreas de atuação</Link>
-                    <Stack height="40px" border="1px solid #f59f36" mr={1} ml={1} ></Stack>
+                    <Stack height="40px" border="1px solid #193D5A" mr={1} ml={1} ></Stack>
                     <Link
                         onClick={(e) => handleScroll(e, 'contato')}
                         href="#contato"
@@ -96,7 +96,7 @@ export default function Inicio() {
                             }
                         }}
                     >Contato</Link>
-                    <Stack height="40px" border="1px solid #f59f36" mr={1} ml={1} ></Stack>
+                    <Stack height="40px" border="1px solid #193D5A" mr={1} ml={1} ></Stack>
                     <Link
                         onClick={(e) => handleScroll(e, 'contato')}
                         href="#contato"
@@ -105,7 +105,7 @@ export default function Inicio() {
                             fontWeight: "600",
                             fontSize: "18px",
                             pb: 1,
-                            color: "#000",
+                            color: "#193D5A",
                             textDecoration: "none",
                             '&:hover': {
                                 color: "#f59f36",
@@ -128,28 +128,28 @@ export default function Inicio() {
                     padding: "1rem",
                     mt: 5,
                     borderRadius: "8px",
-                    bgcolor: "#f59f36",
+                    bgcolor: "#193D5A",
                     color: "#fff",
-                    outline: "1px solid #f59f36",
+                    outline: "1px solid #193D5A",
                     '&:hover': {
-                        color: "#f59f36",
+                        color: "#193D5A",
                         bgcolor: "#fff"
                     }
                 } : {
                     width: "200px",
                     padding: "8px",
                     mt: 5,
-                    bgcolor: "#f59f36",
+                    bgcolor: "#193D5A",
                     color: "#fff",
-                    outline: "1px solid #f59f36",
+                    outline: "1px solid #193D5A",
                     '&:hover': {
-                        color: "#f59f36",
+                        color: "#193D5A",
                         bgcolor: "#fff"
                     }
                 }}>Marque uma consulta</Button>
 
                 <Stack
-                    borderLeft="8px solid #f59f36"
+                    borderLeft="8px solid #193D5A"
                     width={isTablet ? "700px" : "100%"}
                 >
                     <Typography
@@ -157,7 +157,7 @@ export default function Inicio() {
                         fontSize={isTablet ? "52px" : "24px"}
                         ml={2}
                         fontWeight="500"
-                        color="#000"
+                        color="#193D5A"
                     >
                         Soluções jurídicas com técnica dedicação e acolhimento!
                     </Typography>

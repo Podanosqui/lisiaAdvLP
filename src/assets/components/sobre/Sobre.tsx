@@ -15,9 +15,9 @@ export default function Sobre() {
             >
                 {isTablet &&
                     <Stack width="40%">
-                        <Stack borderLeft="5px solid #f59f36" pl={1} ml={8}>
+                        <Stack borderLeft="5px solid #193D5A" pl={1} ml={8}>
                             <Typography
-                                color="#f59f36"
+                                color="#193D5A"
                                 fontFamily="Cinzel"
                                 fontSize="28px"
                                 fontWeight="600"
@@ -38,12 +38,13 @@ export default function Sobre() {
                             <Stack
                                 alignItems="center"
                                 width="220px"
-                                bgcolor="#41454d"
-                                color="#fff"
+                                bgcolor="#fff"
+                                color="#193D5A"
                                 borderRadius="16px 0 16px 0"
                                 padding="4px"
                                 mb="-10px"
                                 zIndex="2"
+                                border="1px solid #193D5A"
                             >
                                 <Typography
                                     textTransform="uppercase"
@@ -53,7 +54,7 @@ export default function Sobre() {
                             <Stack
                                 alignItems="center"
                                 width="290px"
-                                bgcolor="#f59f36"
+                                bgcolor="#193D5A"
                                 padding="10px 8px 8px 8px"
                                 borderRadius="24px 0 24px 0"
                             >
@@ -84,7 +85,7 @@ export default function Sobre() {
                         <Typography fontSize={isTablet ? "18px" : ""} textAlign="justify" mb={3}>
                             Somos uma equipe altamente treinada e especializada em Direito Previdenciário e Recuperação de tributos, com atendimento personalizado, em que os clientes pode optar por contatos presenciais, por vídeo chamada, ligação ou até WhatsApp.
                         </Typography>
-                        <Typography fontSize={isTablet ? "22px" : "14px"} textAlign="justify" mb={3} fontFamily="Cinzel" fontWeight="600">
+                        <Typography fontSize={isTablet ? "22px" : "14px"} textAlign="justify" mb={3} fontFamily="Cinzel" fontWeight="600" color="#193D5A">
                             Seja muito bem-vindo a este espaço, minha missão é te ajudar!
                         </Typography>
                     </Stack>
