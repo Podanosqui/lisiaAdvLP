@@ -1,4 +1,4 @@
-import { Stack, Typography, TextField, Button, useMediaQuery, IconButton } from "@mui/material";
+import { Stack, Typography, useMediaQuery, IconButton } from "@mui/material";
 
 //Icons
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
