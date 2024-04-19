@@ -10,12 +10,13 @@ export default function Sobre() {
     return (
         <>
             <Stack
+            id="quemSomos"
                 direction="row"
                 py={7}
             >
                 {isTablet &&
                     <Stack width="40%">
-                        <Stack borderLeft="5px solid #193D5A" pl={1} ml={8}>
+                        <Stack borderLeft="5px solid #193D5A" pl={2} ml={8}>
                             <Typography
                                 color="#193D5A"
                                 fontFamily="Cinzel"

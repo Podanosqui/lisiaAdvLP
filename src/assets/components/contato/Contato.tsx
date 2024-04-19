@@ -15,10 +15,11 @@ export default function Contato() {
 
     return (
         <>
-            <Stack padding={isTablet ? "3rem 2rem 2rem 2rem" : "1rem"}>
+            <Stack id="contato" padding={isTablet ? "3rem 2rem 2rem 2rem" : "1rem"}>
                 <Stack
                     direction={isTablet ? "row" : "column"}
                     justifyContent="space-between"
+                    alignItems="center"
                 >
                     <Stack width={isTablet ? "50%" : "100%"} alignItems={"flex-start"}>
                         <Stack>
@@ -28,10 +29,9 @@ export default function Contato() {
                                 fontFamily="Cinzel"
                                 fontWeight="500"
                                 mb={5}
+                                pl={2}
                                 sx={{
-                                    borderLeft: "5px solid #193D5A",
-                                    pl: "5px",
-
+                                    borderLeft: "5px solid #193D5A"
                                 }}
                             >Fale Conosco</Typography>
                         </Stack>
@@ -49,10 +49,11 @@ export default function Contato() {
                     </Stack>
 
                     <Stack
-                    borderRadius="16px"
+                        borderRadius="16px"
                         alignItems="center"
                         py="2rem"
                         bgcolor="#193D5A"
+                        maxWidth="600px"
                         width={isTablet ? "50%" : "100%"}>
                         <Typography
                             color="#fff"
@@ -60,14 +61,14 @@ export default function Contato() {
                             fontWeight="500"
                             fontSize="22px"
                         >Nossas redes:</Typography>
-                        <Stack 
-                        py="1rem" 
-                        mt={5} 
-                        direction="row" 
-                        flexWrap="wrap"
-                        justifyContent="space-evenly" 
-                        gap={1}
-                        borderTop="1px solid #fff">
+                        <Stack
+                            py="1rem"
+                            mt={5}
+                            direction="row"
+                            flexWrap="wrap"
+                            justifyContent="space-evenly"
+                            gap={1}
+                            borderTop="1px solid #fff">
                             <IconButton
                                 sx={{
                                     color: "#fff",
@@ -79,7 +80,7 @@ export default function Contato() {
                                         color: "#193d5a"
                                     }
                                 }}
-                            ><WhatsAppIcon /></IconButton>
+                            ><WhatsAppIcon fontSize="large" /></IconButton>
                             <IconButton
                                 sx={{
                                     color: "#fff",
@@ -91,7 +92,7 @@ export default function Contato() {
                                         color: "#193d5a"
                                     }
                                 }}
-                            ><FacebookIcon /></IconButton>
+                            ><FacebookIcon fontSize="large" /></IconButton>
                             <IconButton
                                 sx={{
                                     color: "#fff",
@@ -103,7 +104,17 @@ export default function Contato() {
                                         color: "#193d5a"
                                     }
                                 }}
-                            ><InstagramIcon /></IconButton>
+                            ><InstagramIcon fontSize="large" /></IconButton>
+
+                        </Stack>
+                        <Stack
+                            py="1rem"
+                            direction="row"
+                            flexWrap="wrap"
+                            justifyContent="space-evenly"
+                            gap={1}
+                        >
+
                             <IconButton
                                 sx={{
                                     color: "#fff",
@@ -115,7 +126,7 @@ export default function Contato() {
                                         color: "#193d5a"
                                     }
                                 }}
-                            ><XIcon /></IconButton>
+                            ><XIcon fontSize="large" /></IconButton>
                             <IconButton
                                 sx={{
                                     color: "#fff",
@@ -127,7 +138,7 @@ export default function Contato() {
                                         color: "#193d5a"
                                     }
                                 }}
-                            ><LinkedInIcon /></IconButton>
+                            ><LinkedInIcon fontSize="large" /></IconButton>
                             <IconButton
                                 sx={{
                                     color: "#fff",
@@ -139,7 +150,7 @@ export default function Contato() {
                                         color: "#193d5a"
                                     }
                                 }}
-                            ><EmailIcon /></IconButton>
+                            ><EmailIcon fontSize="large" /></IconButton>
                         </Stack>
                     </Stack>
                 </Stack>

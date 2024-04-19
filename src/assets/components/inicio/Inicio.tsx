@@ -16,6 +16,7 @@ export default function Inicio() {
 
     return (
         <Stack
+            id="top"
             sx={{
                 backgroundImage: `url(${BGS1})`,
                 backgroundSize: 'cover',
@@ -33,7 +34,7 @@ export default function Inicio() {
                     <img
                         style={{ width: "250px" }}
                         src={LogoLisia}
-                        alt="Logo Egret Negócios" />
+                        alt="Logo Lisia Bocchese" />
                 </Stack>
                 <Stack
                     direction="row"
@@ -44,8 +45,8 @@ export default function Inicio() {
                 >
 
                     <Link
-                        onClick={(e) => handleScroll(e, 'contato')}
-                        href="#contato"
+                        onClick={(e) => handleScroll(e, 'quemSomos')}
+                        href="#quemSomos"
                         sx={{
                             fontFamily: "Cinzel",
                             fontWeight: "600",
@@ -62,8 +63,8 @@ export default function Inicio() {
                     >Quem somos</Link>
                     <Stack height="40px" border="1px solid #193D5A" mr={1} ml={1} ></Stack>
                     <Link
-                        onClick={(e) => handleScroll(e, 'contato')}
-                        href="#contato"
+                        onClick={(e) => handleScroll(e, 'atuacao')}
+                        href="#atuacao"
                         sx={{
                             fontFamily: "Cinzel",
                             fontWeight: "600",
@@ -98,8 +99,8 @@ export default function Inicio() {
                     >Contato</Link>
                     <Stack height="40px" border="1px solid #193D5A" mr={1} ml={1} ></Stack>
                     <Link
-                        onClick={(e) => handleScroll(e, 'contato')}
-                        href="#contato"
+                        onClick={(e) => handleScroll(e, 'ondeEstamos')}
+                        href="#ondeEstamos"
                         sx={{
                             fontFamily: "Cinzel",
                             fontWeight: "600",
