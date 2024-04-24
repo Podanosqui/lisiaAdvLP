@@ -14,7 +14,7 @@ export default function Footer() {
 
     return (
         <>
-            <Stack bgcolor="#193d5a" padding="1rem 0" justifyContent="space-around" mt="-1px">
+            <Stack width="100%" bgcolor="#193d5a" padding="1rem 0" justifyContent="space-around" mt="-1px">
                 <Stack alignItems="center" my={3}>
                     <Typography textAlign="center" color="#fff">&copy; Copyright - 2024, Lisia Bocchese Advocacia.</Typography>
                     <Typography textAlign="center" color="#fff">Todos os direitos reservados</Typography>

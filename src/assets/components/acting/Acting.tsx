@@ -1,15 +1,18 @@
 import { Button, Stack, Typography, useMediaQuery } from "@mui/material";
 import DireitoPrevidenciario from "../../images/DireitoPrevidenciarioImg.png";
 import DireitoTributario from "../../images/DireitoTributarioImg.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Acting() {
 
     const isTablet = useMediaQuery('(min-width:900px)');
 
+    const navigate = useNavigate()
 
     return (
         <>
             <Stack
+                width="100%"
                 id="atuacao"
                 py="2rem"
                 bgcolor="#193D5A">
@@ -31,6 +34,7 @@ export default function Acting() {
                         <Stack my={2} width="50%" borderBottom="1px solid #fff"></Stack>
                         <Typography color="#fff" fontFamily="Cinzel" fontWeight="600" width={isTablet ? "240px" : "150px"} textAlign="center" lineHeight={1} fontSize={isTablet ? 24 : 18} my={1}>Direito Previdenciário</Typography>
                         <Button
+                            onClick={() => navigate('/direito-previdenciario')}
                             sx={{
                                 mt: 2,
                                 border: '1px solid #fff',

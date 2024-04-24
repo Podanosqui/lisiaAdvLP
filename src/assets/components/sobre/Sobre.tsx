@@ -10,7 +10,8 @@ export default function Sobre() {
     return (
         <>
             <Stack
-            id="quemSomos"
+                width="100%"
+                id="quemSomos"
                 direction="row"
                 py={7}
             >
@@ -69,7 +70,7 @@ export default function Sobre() {
                         </Stack>
                         {!isTablet &&
                             <Stack>
-                                <img src={FotoLisiaMobile} style={isMobile ? {marginTop: "1rem" } : {}} width="200px" alt="Foto Lisia Mobile" />
+                                <img src={FotoLisiaMobile} style={isMobile ? { marginTop: "1rem" } : {}} width="200px" alt="Foto Lisia Mobile" />
                             </Stack>
                         }
                     </Stack>

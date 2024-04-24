@@ -1,22 +1,24 @@
-import Acting from "./assets/components/acting/Acting";
-import Contato from "./assets/components/contato/Contato";
-import Footer from "./assets/components/footer/Footer";
-import Inicio from "./assets/components/inicio/Inicio";
-import OndeEstamos from "./assets/components/ondeEstamos/OndeEstamos";
-import Sobre from "./assets/components/sobre/Sobre";
+import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Home from "./assets/pages/home/Home";
+import { Stack } from "@mui/material";
+import DireitoPrevidenciario from "./assets/pages/direitoPrevidenciario/DireitoPrevidenciario";
+
 
 function App() {
 
   return (
     <>
-      <Inicio />
-      <Sobre />
-      <Acting />
-      <Contato />
-      <OndeEstamos />
-      <Footer />
+      <Stack width="100%" alignItems="center" justifyContent="center">
+        <Router>
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/direito-previdenciario" element={<DireitoPrevidenciario />} />
+            <Route index element={<Navigate to="/home" />} />
+          </Routes>
+        </Router>
+      </Stack>
     </>
   )
 }
 
-export default App
+export default App;

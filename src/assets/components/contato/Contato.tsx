@@ -15,7 +15,7 @@ export default function Contato() {
 
     return (
         <>
-            <Stack id="contato" padding={isTablet ? "3rem 2rem 2rem 2rem" : "1rem"}>
+            <Stack width="100%" id="contato" padding={isTablet ? "3rem 2rem 2rem 2rem" : "1rem"}>
                 <Stack
                     direction={isTablet ? "row" : "column"}
                     justifyContent="space-between"

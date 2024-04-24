@@ -10,6 +10,7 @@ export default function OndeEstamos() {
     return (
         <>
             <Stack
+                width="100%"
                 id="ondeEstamos"
                 padding={isTablet ? " 4rem 10rem" : "3rem 1rem"}
                 sx={{

@@ -16,6 +16,7 @@ export default function Inicio() {
 
     return (
         <Stack
+            width="100%"
             id="top"
             sx={{
                 backgroundImage: `url(${BGS1})`,
@@ -160,7 +161,7 @@ export default function Inicio() {
                         fontWeight="500"
                         color="#193D5A"
                     >
-                        Soluções jurídicas com técnica dedicação e acolhimento!
+                        Soluções jurídicas com técnica, dedicação e acolhimento!
                     </Typography>
 
                 </Stack>
