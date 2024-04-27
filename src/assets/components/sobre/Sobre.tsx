@@ -1,10 +1,10 @@
 import { Stack, Typography, useMediaQuery } from "@mui/material";
-import FotoLisiaDesktop from "../../images/LisiaBoccheseDesktopPlusName.png";
-import FotoLisiaMobile from "../../images/FotoPerfilLisia.png";
+import FotoLisiaDesktop from "../../images/NewPhotoLisiaDesktop.png";
+import FotoLisiaMobile from "../../images/NewPhotoLisiaMobile.png";
 
 export default function Sobre() {
 
-    const isTablet = useMediaQuery('(min-width:900px)');
+    const isTablet = useMediaQuery('(min-width:768px)');
     const isMobile = useMediaQuery('(max-width:525px)');
 
     return (
@@ -70,7 +70,7 @@ export default function Sobre() {
                         </Stack>
                         {!isTablet &&
                             <Stack>
-                                <img src={FotoLisiaMobile} style={isMobile ? { marginTop: "1rem" } : {}} width="200px" alt="Foto Lisia Mobile" />
+                                <img src={FotoLisiaMobile} style={isMobile ? { marginTop: "1rem" } : {}} width="180px" alt="Foto Lisia Mobile" />
                             </Stack>
                         }
                     </Stack>
