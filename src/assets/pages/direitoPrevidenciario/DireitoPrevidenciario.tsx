@@ -43,7 +43,7 @@ export default function DireitoPrevidenciario() {
             <Stack width="100%">
                 <Stack
                     color="#fff"
-                    p="3rem 4rem"
+                    p={isTablet ? "3rem 4rem" : " 3rem 1rem"}
                     sx={{
                         backgroundImage: `url(${BGDireitoPrevidenciario})`,
                         backgroundSize: 'cover',
@@ -53,7 +53,7 @@ export default function DireitoPrevidenciario() {
                         variant="h1"
                         textAlign="center"
                         fontFamily="Cinzel"
-                        fontSize="42px"
+                        fontSize={isTablet ? "42px" : "28px"}
                         mb={3}>Direito previdenciário</Typography>
                     <Typography
                         my={2}
@@ -93,6 +93,8 @@ export default function DireitoPrevidenciario() {
                             >Aposentadoria</Typography>
                         </Stack>
                         <Button
+                            onClick={(e) => handleScroll(e, 'aposentadoria')}
+                            href="#aposentadoria"
                             sx={{
                                 bgcolor: "#193d5a",
                                 color: "#fff",
@@ -124,6 +126,8 @@ export default function DireitoPrevidenciario() {
                             >Benefícios e Auxílios</Typography>
                         </Stack>
                         <Button
+                            onClick={(e) => handleScroll(e, 'beneficionsEAuxilios')}
+                            href="#beneficionsEAuxilios"
                             sx={{
                                 bgcolor: "#193d5a",
                                 color: "#fff",
@@ -155,6 +159,8 @@ export default function DireitoPrevidenciario() {
                             >Revisões de Aposentadoria</Typography>
                         </Stack>
                         <Button
+                            onClick={(e) => handleScroll(e, 'revisoesAposentadoria')}
+                            href="#revisoesAposentadoria"
                             sx={{
                                 bgcolor: "#193d5a",
                                 color: "#fff",
@@ -186,6 +192,8 @@ export default function DireitoPrevidenciario() {
                             >Acordos Internacionais</Typography>
                         </Stack>
                         <Button
+                            onClick={(e) => handleScroll(e, 'acordosInternacionais')}
+                            href="#acordosInternacionais"
                             sx={{
                                 bgcolor: "#193d5a",
                                 color: "#fff",
@@ -200,6 +208,7 @@ export default function DireitoPrevidenciario() {
 
                 {/* Section Aposentadoria */}
                 <Stack
+                    id="aposentadoria"
                     width="100%"
                     alignItems="center">
                     <Stack
@@ -215,7 +224,7 @@ export default function DireitoPrevidenciario() {
                             my={2}
                             fontFamily="Cinzel"
                             color="#fff"
-                            fontSize="38px"
+                            fontSize={isTablet ? "42px" : "28px"}
                         >Aposentadoria</Typography>
                     </Stack>
                     <Stack
@@ -298,6 +307,8 @@ export default function DireitoPrevidenciario() {
                                     >Aposentadoria por tempo de contribuição</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'tempoContribuição')}
+                                    href="#tempoContribuição"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -330,6 +341,8 @@ export default function DireitoPrevidenciario() {
                                     >Aposentadoria por invalidez</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'invalidez')}
+                                    href="#invalidez"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -362,6 +375,8 @@ export default function DireitoPrevidenciario() {
                                     >Aposentadoria por tempo de contribuição ao deficiente (PCD)</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'tempoContribuicaoPDC')}
+                                    href="#tempoContribuicaoPDC"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -394,6 +409,8 @@ export default function DireitoPrevidenciario() {
                                     >Aposentadoria por idade do deficiente (PCD)</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'idadePDC')}
+                                    href="#idadePDC"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -426,6 +443,8 @@ export default function DireitoPrevidenciario() {
                                     >Aposentadoria por idade rural</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'idadeRural')}
+                                    href="#idadeRural"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -458,6 +477,8 @@ export default function DireitoPrevidenciario() {
                                     >Aposentadoria por idade híbrida</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'idadeHibrida')}
+                                    href="#idadeHibrida"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -649,11 +670,116 @@ export default function DireitoPrevidenciario() {
                                 </AccordionDetails>
                             </Accordion>
                         </Stack>
+
+                        <Stack my={1}>
+                            <Accordion id="idadePDC" sx={{ border: "2px solid #193d5a" }}>
+                                <AccordionSummary
+                                    expandIcon={<ArrowDropDownIcon sx={{ color: "#193d5a" }} />} >
+                                    <Typography fontWeight="700" fontFamily="Cinzel" color="#193d5a">Aposentadoria por idade do Deficiente (PDC):</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+
+                                    <Typography my={1}>
+                                        No caso da aposentadoria por idade da pessoa com deficiência, exige-se 60 (sessenta) anos de idade, se homem, e 55 (cinquenta e cinco) anos de idade, se mulher, independentemente do grau de deficiência, desde que cumprido tempo mínimo de contribuição de 15 (quinze) anos e comprovada a existência de deficiência durante igual período.
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </Stack>
+
+                        <Stack my={1}>
+                            <Accordion id="idadeRural" sx={{ border: "2px solid #193d5a" }}>
+                                <AccordionSummary
+                                    expandIcon={<ArrowDropDownIcon sx={{ color: "#193d5a" }} />} >
+                                    <Typography fontWeight="700" fontFamily="Cinzel" color="#193d5a">Aposentadoria por idade rural:</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        A Previdência Social considera trabalhadores rurais não só agricultores, mas também os pescadores artesãos, garimpeiros e produtores rurais. A aposentadoria rural é um benefício previdenciário destinado aos trabalhadores que não podem mais contar com a força braçal.
+                                    </Typography>
+                                    <Typography my={1}>
+                                        Esse benefício considera os trabalhadores rurais que exerçam suas atividades em regime de economia familiar ou individual, que se dá quando o trabalho da família é indispensável à sua subsistência e desenvolvimento socioeconômico, sendo exercido em condições de mútua dependência e colaboração.
+                                    </Typography>
+                                    <Typography my={1}>
+                                        Para ter direito a aposentadoria rural é necessário comprovar o efetivo exercício da atividade rural no período imediatamente anterior ao requerimento do benefício junto ao INSS e os requisitos são 15 anos de atividade rural, correspondentes a 180 meses de carência e idade de 55 anos para as mulheres e 60 anos para os homens.
+                                    </Typography>
+
+
+                                    <Typography mt={2} mb={1} fontWeight="bold">
+                                        Documentos necessários
+                                    </Typography>
+                                    <Typography>
+                                        1.  Autodeclaração do segurado especial é o documento mais importante e deve ser assinado pelo próprio segurado.
+                                    </Typography>
+                                    <Typography>
+                                        2.	Os blocos de notas de produtor rural;
+                                    </Typography>
+                                    <Typography>
+                                        3.	Declaração de aptidão ao PRONAF;
+                                    </Typography>
+                                    <Typography>
+                                        4.	Contratos de arrendamento, parceria ou comodato;
+                                    </Typography>
+                                    <Typography>
+                                        5.	Comprovante de cadastro no INCRA;
+                                    </Typography>
+                                    <Typography>
+                                        6.	Comprovante de pagamento de ITR;
+                                    </Typography>
+                                    <Typography>
+                                        7.	Histórico escolar;
+                                    </Typography>
+                                    <Typography>
+                                        8.	Certidão de casamento;
+                                    </Typography>
+                                    <Typography>
+                                        9.	Declaração do sindicato que represente o trabalhador;
+                                    </Typography>
+
+                                </AccordionDetails>
+                            </Accordion>
+                        </Stack>
+
+                        <Stack my={1}>
+                            <Accordion id="idadeHibrida" sx={{ border: "2px solid #193d5a" }}>
+                                <AccordionSummary
+                                    expandIcon={<ArrowDropDownIcon sx={{ color: "#193d5a" }} />} >
+                                    <Typography fontWeight="700" fontFamily="Cinzel" color="#193d5a">Aposentadoria por idade híbrida:</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        A aposentadoria por idade híbrida é uma modalidade de benefício ligado a aposentadoria por idade urbana que possibilita a soma de tempo de trabalho urbano e rural para atingir o direito à aposentadoria por idade.
+                                    </Typography>
+                                    <Typography my={1}>
+                                        A aposentadoria por idade híbrida é uma modalidade de benefício ligado a aposentadoria por idade urbana que possibilita a soma de tempo de trabalho urbano e rural para atingir o direito à aposentadoria por idade.
+                                    </Typography>
+
+                                    <Typography mt={2} mb={1} fontWeight="bold">
+                                        Documentos necessários
+                                    </Typography>
+                                    <Typography>
+                                        1.	Carteira de identidade (RG) e Cadastro de Pessoa Física (CPF)
+                                    </Typography>
+                                    <Typography>
+                                        2.	Certidão de casamento
+                                    </Typography>
+                                    <Typography>
+                                        3.	Se for empregado, a carteira de trabalho e previdência Social (CTPS) e/ou carnes de contribuição para comprovação do período de trabalho urbano.
+                                    </Typography>
+                                    <Typography>
+                                        4.	Documentos que comprovem o exercício da atividade rural, como por ex., contratos de arrendamento, documentos de associações rurais parceria ou comodato, documentos de associações rurais, notas fiscais de venda de produtos, declaração de sindicatos rurais entre outros.
+                                    </Typography>
+                                    <Typography>
+                                        5.	Comprovante de residência rural.
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </Stack>
                     </Stack>
                 </Stack>
 
                 {/* Section Beneficios e auxilios */}
                 <Stack
+                    id="beneficionsEAuxilios"
                     width="100%"
                     alignItems="center">
                     <Stack
@@ -670,7 +796,7 @@ export default function DireitoPrevidenciario() {
                             my={2}
                             fontFamily="Cinzel"
                             color="#fff"
-                            fontSize="38px"
+                            fontSize={isTablet ? "42px" : "28px"}
                         >Benefícions e Auxílios</Typography>
                     </Stack>
                     <Stack
@@ -898,6 +1024,7 @@ export default function DireitoPrevidenciario() {
 
                 {/* Section Revisões da Aposentadoria */}
                 <Stack
+                    id="revisoesAposentadoria"
                     width="100%"
                     alignItems="center">
                     <Stack
@@ -914,7 +1041,7 @@ export default function DireitoPrevidenciario() {
                             my={2}
                             fontFamily="Cinzel"
                             color="#fff"
-                            fontSize="38px"
+                            fontSize={isTablet ? "42px" : "28px"}
                         >Revisões de Aposentadoria</Typography>
                     </Stack>
                     <Stack py="4rem" px="2rem">
@@ -972,6 +1099,7 @@ export default function DireitoPrevidenciario() {
 
                 {/* Section Acordos Intenacionais */}
                 <Stack
+                    id="acordosInternacionais"
                     width="100%"
                     alignItems="center">
                     <Stack
@@ -988,7 +1116,7 @@ export default function DireitoPrevidenciario() {
                             fontFamily="Cinzel"
                             textAlign="center"
                             color="#fff"
-                            fontSize="38px"
+                            fontSize={isTablet ? "42px" : "28px"}
                         >Acordos Internacionais</Typography>
                     </Stack>
                     <Stack py="4rem" px="2rem">
