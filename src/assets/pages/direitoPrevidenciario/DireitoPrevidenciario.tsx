@@ -23,6 +23,8 @@ import IconPrestacaoContinuada from "../../images/IconBPC.png";
 import Icon25 from "../../images/Icon25.png";
 import CheckIcon from '@mui/icons-material/Check';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 
 
@@ -38,10 +40,16 @@ export default function DireitoPrevidenciario() {
         }
     };
 
+    const location = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     return (
         <>
             <Stack width="100%">
                 <Stack
+                    id="direitoPrevidenciario"
                     color="#fff"
                     p={isTablet ? "3rem 4rem" : " 3rem 1rem"}
                     sx={{

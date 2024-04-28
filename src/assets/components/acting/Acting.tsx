@@ -1,13 +1,19 @@
 import { Button, Stack, Typography, useMediaQuery } from "@mui/material";
 import DireitoPrevidenciario from "../../images/DireitoPrevidenciarioImg.png";
 import DireitoTributario from "../../images/DireitoTributarioImg.png";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Acting() {
 
     const isTablet = useMediaQuery('(min-width:900px)');
 
     const navigate = useNavigate()
+
+    const location = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
 
     return (
         <>
