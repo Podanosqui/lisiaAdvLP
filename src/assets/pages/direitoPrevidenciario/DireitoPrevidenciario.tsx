@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary, Button, Stack, Typography, useMediaQuery } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Button, IconButton, Stack, Typography, useMediaQuery } from "@mui/material";
 import BGDireitoPrevidenciario from "../../images/BGDireitoPrevidenciario.png";
 import BGAposentadoria from "../../images/BGAposentadoria.png";
 import BGBeneficiosEAuxilios from "../../images/BGBeneficiosEAuxilios.png";
@@ -23,14 +23,17 @@ import IconPrestacaoContinuada from "../../images/IconBPC.png";
 import Icon25 from "../../images/Icon25.png";
 import CheckIcon from '@mui/icons-material/Check';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
 
 
 export default function DireitoPrevidenciario() {
 
     const isTablet = useMediaQuery('(min-width:768px)');
+
+    const navigate = useNavigate()
 
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
         e.preventDefault();
@@ -853,6 +856,8 @@ export default function DireitoPrevidenciario() {
                                     >Auxílio-Reclusão</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'auxilioReclusao')}
+                                    href="#auxilioReclusao"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -885,6 +890,8 @@ export default function DireitoPrevidenciario() {
                                     >Pensão de morte</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'pensaoDeMorte')}
+                                    href="#pensaoDeMorte"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -917,6 +924,8 @@ export default function DireitoPrevidenciario() {
                                     >Auxílio-Acidente</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'auxilioAcidente')}
+                                    href="#auxilioAcidente"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -949,6 +958,8 @@ export default function DireitoPrevidenciario() {
                                     >Auxílio Doença</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'auxilioDoenca')}
+                                    href="#auxilioDoenca"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -981,6 +992,8 @@ export default function DireitoPrevidenciario() {
                                     >Benfício de prestação continuada (BPC/LOAS)</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'bpcloas')}
+                                    href="#bpcloas"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -1013,6 +1026,8 @@ export default function DireitoPrevidenciario() {
                                     >Adicional de 25% na aposentadoria por invalidez</Typography>
                                 </Stack>
                                 <Button
+                                    onClick={(e) => handleScroll(e, 'adicional25')}
+                                    href="#adicional25"
                                     sx={{
                                         bgcolor: "#193d5a",
                                         color: "#fff",
@@ -1027,6 +1042,367 @@ export default function DireitoPrevidenciario() {
 
                         </Stack>
 
+                    </Stack>
+
+                    <Stack my={3} p="1rem">
+                        <Stack my={1}>
+                            <Accordion id="auxilioReclusao" sx={{ border: "2px solid #193d5a" }}>
+                                <AccordionSummary
+                                    expandIcon={<ArrowDropDownIcon sx={{ color: "#193d5a" }} />} >
+                                    <Typography fontWeight="700" fontFamily="Cinzel" color="#193d5a">Auxílio Reclusão:</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        O auxílio-reclusão é um benefício previdenciário devido aos dependentes do segurado da Previdência Social que vier a ser preso e comprovar a condição de baixa renda.
+                                    </Typography>
+                                    <Typography my={1}>
+                                        Este benefício sofreu importantes alterações na Reforma da Previdência de 2019 e os requisitos atuais para a concessão do benefício são:
+                                    </Typography>
+                                    <Stack ml={2}>
+                                        <ul>
+                                            <li>
+                                                <Typography>qualidade de segurado do preso;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>carência de 24 meses de contribuições (a partir de 18/01/2019, conforme MP 871/2019, convertida na Lei 13.846/2019);</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>estar em regime fechado;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>segurado preso comprovar ser de baixa renda.</Typography>
+                                            </li>
+                                        </ul>
+                                    </Stack>
+                                    <Typography my={1}>
+                                        Caso o trabalhador tenha sido preso antes de 18/01/2019, os seus dependentes também têm direito ao benefício mesmo que o regime de reclusão seja o semiaberto.
+                                    </Typography>
+                                    <Typography mt={2} mb={1} fontWeight="bold">
+                                        Documentos necessários
+                                    </Typography>
+                                    <Typography>
+                                        1.  Certidão de nascimento ou casamento do dependente;
+                                    </Typography>
+                                    <Typography>
+                                        2.	Carteira de trabalho e Previdência Social (CTPS) do segurado;
+                                    </Typography>
+                                    <Typography>
+                                        3.	Sentença condenatória
+                                    </Typography>
+                                    <Typography>
+                                        4.	Declaração da autoridade carcerária para comprovar a permanência da prisão do segurado;
+                                    </Typography>
+                                    <Typography>
+                                        5.	CPF e RG do dependente e do segurado.
+                                    </Typography>
+
+
+                                </AccordionDetails>
+                            </Accordion>
+                        </Stack>
+
+                        <Stack my={1}>
+                            <Accordion id="pensaoDeMorte" sx={{ border: "2px solid #193d5a" }}>
+                                <AccordionSummary
+                                    expandIcon={<ArrowDropDownIcon sx={{ color: "#193d5a" }} />} >
+                                    <Typography fontWeight="700" fontFamily="Cinzel" color="#193d5a">Pensão de morte:</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        A Pensão por Morte é um benefício previdenciário concedido aos dependentes do segurado do Instituto Nacional do Seguro Social (INSS) que vier a falecer, sendo ele aposentado ou não.
+                                    </Typography>
+                                    <Typography my={1}>
+                                        Em caso de desaparecimento do Instituidor por mais de seis meses, é possível a concessão da pensão por morte aos dependentes de forma provisória, mediante a declaração da autoridade policial da morte presumida.
+                                    </Typography>
+                                    <Typography mb={1}>
+                                        Quem pode pleitear a pensão por morte:
+                                    </Typography>
+
+                                    <Typography>
+                                        1.	Cônjuge, a companheira, o companheiro e o filho não emancipado, de qualquer condição, menor de 21 (vinte e um) anos ou inválido ou que tenha deficiência intelectual ou mental ou deficiência grave;
+                                    </Typography>
+                                    <Typography>
+                                        2.	Pais, desde que provem a dependência econômica em relação ao segurado falecido.
+                                    </Typography>
+                                    <Typography>
+                                        3.	Irmãos menores de 21 anos ou de qualquer idade, desde que sejam inválidos ou apresentem alguma deficiência.
+                                    </Typography>
+
+                                    <Stack my={1} ml={2}>
+                                        <Typography mb={1}>Para receber o benefício desde o óbito do Instituidor é preciso observar os seguintes prazos:</Typography>
+                                        <ul>
+                                            <li><Typography>Até 180 (cento e oitenta) dias após o óbito, para os filhos menores de 16 (dezesseis) anos;</Typography></li>
+                                            <li><Typography>Até 90 (noventa) dias após o óbito, para os demais dependentes;</Typography></li>
+                                        </ul>
+                                    </Stack>
+
+                                    <Typography mt={2} mb={1} fontWeight="bold">
+                                        Documentos necessários
+                                    </Typography>
+                                    <Typography>
+                                        1.  Certidão de óbito ou documento que comprove a morte presumida do segurado instituidor;
+                                    </Typography>
+                                    <Typography>
+                                        2.  Certidão de óbito ou documento que comprove a morte presumida do segurado instituidor;
+                                    </Typography>
+                                    <Typography>
+                                        3.  Documento que comprove a condição de dependente do requerente para com o segurado falecido, tais como certidão de casamento, certidão de nascimento, decisão judicial e demais documentos conforme o caso.
+                                    </Typography>
+                                    <Typography mt={1}>
+                                        Como a união estável deve ser comprovada, alguns documentos podem auxiliar na prova desta condição. São eles:
+                                    </Typography>
+                                    <Stack ml={2}>
+                                        <ul>
+                                            <li>
+                                                <Typography>Certidão de nascimento de filho em comum;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Comprovante de casamento religioso;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Declaração do imposto de renda do segurado, em que conste o requerente como dependente;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Prova de mesmo domicílio, que são contas em nome do casal no mesmo endereço;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Conta bancária conjunta;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Planos de saúde onde consta interessado como dependente do segurado;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Apólice de seguro;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>E a própria certidão de óbito do segurado onde conste o interessado como declarante do óbito.</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Associações em clubes sociais, esportivos, de lazer e assemelhados.</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Procuração outorgada entre os companheiros;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Fotos, vídeos e publicações em redes sociais;</Typography>
+                                            </li>
+                                        </ul>
+                                    </Stack>
+
+                                </AccordionDetails>
+                            </Accordion>
+                        </Stack>
+
+                        <Stack my={1}>
+                            <Accordion id="auxilioAcidente" sx={{ border: "2px solid #193d5a" }}>
+                                <AccordionSummary
+                                    expandIcon={<ArrowDropDownIcon sx={{ color: "#193d5a" }} />} >
+                                    <Typography fontWeight="700" fontFamily="Cinzel" color="#193d5a">Auxílio acidente:</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        O auxílio-acidente é uma indenização destinada ao segurado que possui redução da capacidade laborativa em razão de tipo de acidente (de qualquer natureza).
+                                    </Typography>
+                                    <Typography my={1}>
+                                        É possível receber auxílio-acidente e salário, sendo devido até a véspera da aposentadoria, ou até o óbito do seu titular.
+                                    </Typography>
+                                    <Typography mb={1}>
+                                        Este benefício só pode ser concedido a quatro modalidade de contribuintes, são eles:
+                                    </Typography>
+                                    <Stack ml={2}>
+                                        <ul>
+                                            <li>
+                                                <Typography>Empregado;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Empregado doméstico;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Trabalhador avulso;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Segurado especial.</Typography>
+                                            </li>
+                                        </ul>
+                                    </Stack>
+                                    <Typography my={1}>O contribuinte individual (profissional autônomo), o facultativo aquele que contribui para Previdência, mas não tem atividade laborativa, não tem direito ao auxílio-acidente.
+                                    </Typography>
+                                    <Stack my={1} ml={2}>
+                                        <Typography>Os requisitos para acesso ao benefício de auxílio-acidente são:</Typography>
+                                        <ul>
+                                            <li>
+                                                <Typography>Ocorrência de acidente de qualquer natureza;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>
+                                                    Redução da capacidade para o trabalho, atestada por laudo médico que determine a natureza e gravidade das sequelas decorrentes do acidente;
+                                                </Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Nexo causal entre o acidente e a redução da capacidade;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Qualidade de segurado na data do acidente.</Typography>
+                                            </li>
+                                        </ul>
+                                    </Stack>
+                                    <Typography mt={2} mb={1} fontWeight="bold">
+                                        Documentos necessários
+                                    </Typography>
+                                    <Typography>
+                                        1.	Documentos de identificação, como carteira de identidade (RG) e cadastro de pessoa física (CPF).
+                                    </Typography>
+                                    <Typography>
+                                        2.	Carteira de trabalho (CTPS) e comprovantes de contribuições previdenciárias.
+                                    </Typography>
+                                    <Typography>
+                                        3.	Laudo médico detalhado que comprove a existência das sequelas permanentes e sua relação com o acidente de trabalho.
+                                    </Typography>
+                                    <Typography>
+                                        4.	Exames médicos e relatórios médicos relacionados às lesões e às limitações resultantes.
+                                    </Typography>
+                                    <Typography>
+                                        5.	Documentos que comprovem o vínculo empregatício ou a situação de trabalho, se aplicável.
+                                    </Typography>
+                                    <Typography>
+                                        6.	Outros documentos médicos ou legais relevantes para o caso, conforme solicitado pelo INSS durante o processo de solicitação.
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </Stack>
+
+                        <Stack my={1}>
+                            <Accordion id="auxilioDoenca" sx={{ border: "2px solid #193d5a" }}>
+                                <AccordionSummary
+                                    expandIcon={<ArrowDropDownIcon sx={{ color: "#193d5a" }} />} >
+                                    <Typography fontWeight="700" fontFamily="Cinzel" color="#193d5a">Auxílio doença</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        O auxílio-doença previdenciário, também chamado por Benefício por Incapacidade Temporária é um benefício destinado a quem sofreu uma doença ou um acidente que não tenha relação com o trabalho e se encontra temporariamente incapacitado de exercer as suas atividades laborativas.
+                                    </Typography>
+                                    <Typography my={1}>
+                                        É importante que no laudo médico detalhe a condição de saúde que levou à incapacidade temporária do trabalhador e estabeleça um prognóstico sobre a duração do afastamento.
+                                    </Typography>
+                                    <Typography>
+                                        O auxílio-doença mensal corresponde a 91% do salário de benefício. Para ter direito ao benefício, o Contribuinte deve reunir os seguintes requisitos:
+                                    </Typography>
+                                    <Stack ml={2}>
+                                        <ul>
+                                            <li>
+                                                <Typography>Possuir qualidade de Segurado;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Possuir qualidade de Segurado;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Estar incapacitado temporariamente para o trabalho ou para as suas atividades habituais em decorrência da doença.</Typography>
+                                            </li>
+                                        </ul>
+                                    </Stack>
+
+                                    <Typography mt={2} mb={1} fontWeight="bold">
+                                        Documentos necessários
+                                    </Typography>
+                                    <Typography>
+                                        1.	Documentos de identificação, como carteira de identidade (RG) e cadastro de pessoa física (CPF).
+                                    </Typography>
+                                    <Typography>
+                                        2.	Carteira de trabalho e Previdência Social (CTPS) e comprovantes de contribuições previdenciárias.
+                                    </Typography>
+                                    <Typography>
+                                        3.	Laudo médico detalhado que ateste a incapacidade temporária para o trabalho e indique a duração prevista do afastamento.
+                                    </Typography>
+                                    <Typography>
+                                        4.	Exames médicos, relatórios médicos e a comprovação do tratamento da doença ou lesão.
+                                    </Typography>
+                                    <Typography>
+                                        5.	Documentos que comprovem o vínculo empregatício ou a situação de trabalho, se aplicável.
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </Stack>
+
+                        <Stack my={1}>
+                            <Accordion id="bpcloas" sx={{ border: "2px solid #193d5a" }}>
+                                <AccordionSummary
+                                    expandIcon={<ArrowDropDownIcon sx={{ color: "#193d5a" }} />} >
+                                    <Typography fontWeight="700" fontFamily="Cinzel" color="#193d5a">Benefício de Prestação Continuada (BPC/LOAS):</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        O Benefício Assistencial (ou Benefício de Prestação Continuada – BPC), também chamado de LOAS, é o benefício pago pelo INSS que visa garantir um salário-mínimo mensal para pessoas que não possuem meios econômicos de prover à própria subsistência ou de tê-la provida por sua família. Pode ser separado em dois tipos:
+                                    </Typography>
+                                    <Stack ml={2}>
+                                        <ul>
+                                            <li>
+                                                <Typography>Benefício Assistencial ao Idoso: concedido para idosos com idade acima de 65 anos que vivenciam estado de pobreza/necessidade;</Typography>
+                                            </li>
+                                            <li>
+                                                <Typography>Benefício Assistencial à Pessoa com Deficiência, que estão impossibilitadas de participar e se inserir em paridade de condições com o restante da sociedade, e que também vivenciam estado de pobreza ou necessidade econômica.</Typography>
+                                            </li>
+                                        </ul>
+                                    </Stack>
+                                    <Typography>Para a obtenção deste benefício não é preciso que a pessoa tenha contribuído para o INSS, bastando que este preencha os requisitos. </Typography>
+                                    <Typography mt={1}>Entretanto, não tem direito ao 13º salário e nem a possibilidade de adicional de 25% para pessoas que necessitem de acompanhamento permanente</Typography>
+
+
+                                    <Typography mt={2} mb={1} fontWeight="bold">
+                                        Documentos necessários
+                                    </Typography>
+                                    <Typography>
+                                        1.	Documentos de identificação, como carteira de identidade (RG) e cadastro de pessoa física (CPF).
+                                    </Typography>
+                                    <Typography>
+                                        2.	Certidão de nascimento ou casamento.
+                                    </Typography>
+                                    <Typography>
+                                        3.	Laudo médico ou avaliação da deficiência.
+                                    </Typography>
+                                    <Typography>
+                                        4.	Comprovante de residência.
+                                    </Typography>
+                                    <Typography textTransform='uppercase'>
+                                        5.	CADUNICO
+                                    </Typography>
+                                    <Typography>
+                                        6.	Documentos que comprovem a situação de vulnerabilidade social, como p. ex., declaração de renda e outros documentos solicitados pelo INSS.
+                                    </Typography>
+
+                                </AccordionDetails>
+                            </Accordion>
+                        </Stack>
+
+                        <Stack my={1}>
+                            <Accordion id="adicional25" sx={{ border: "2px solid #193d5a" }}>
+                                <AccordionSummary
+                                    expandIcon={<ArrowDropDownIcon sx={{ color: "#193d5a" }} />} >
+                                    <Typography fontWeight="700" fontFamily="Cinzel" color="#193d5a">Adicional de 25% na Aposentadoria por Invalidez:</Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography>
+                                        O Aposentado por invalidez que comprovar a necessidade da assistência permanente de outra pessoa para realizar as atividades do dia a dia, tem direito ao um acréscimo de 25% no valor da sua aposentadoria.
+                                    </Typography>
+                                    <Typography my={1}>
+                                        A chamada “grande invalidez” é o único caso em que um Segurado pode receber acima do teto da previdência.
+                                    </Typography>
+
+                                    <Typography mt={2} mb={1} fontWeight="bold">
+                                        Documentos necessários
+                                    </Typography>
+                                    <Typography>
+                                        1.  Laudo médico detalhado e atualizado que comporve a incapacidade permanente e a necessidade de assistência permanente de outra pessoa ou não possuir condições de efetuar as atividades diárias.
+                                    </Typography>
+                                    <Typography>
+                                        2.  Carteira de identidade (RG) e cadastro de pessoa física (CPF)
+                                    </Typography>
+                                    <Typography>
+                                        3.  Comprovante de residência
+                                    </Typography>
+
+                                </AccordionDetails>
+                            </Accordion>
+                        </Stack>
                     </Stack>
                 </Stack>
 
@@ -1132,6 +1508,45 @@ export default function DireitoPrevidenciario() {
                         <Typography textAlign="center" fontSize="22px" my={3}>Dependendo da situação, esse trabalhador poderá se aposentar no país de migração e usufruir das duas aposentadorias.</Typography>
                         <Typography textAlign="center" fontSize="22px">Todas as hipóteses dependem de uma análise individualizada do caso.</Typography>
                     </Stack>
+                </Stack>
+
+                <Stack>
+
+                    <IconButton
+                        onClick={(e) => handleScroll(e, 'direitoPrevidenciario')}
+                        href="#direitoPrevidenciario"
+                        sx={{
+                            padding: "12px",
+                            position: "fixed",
+                            bottom: "2%",
+                            right: "2%",
+                            zIndex: "20",
+                            bgcolor: "#193d5a",
+                            color: "#fff",
+                            '&:hover': {
+                                color: "#193d5a",
+                                bgcolor: "#fff"
+                            }
+                        }}>
+                        <KeyboardArrowUpIcon sx={{ fontSize: 35 }} />
+                    </IconButton>
+                    <IconButton
+                        onClick={() => navigate('/home')}
+                        sx={{
+                            padding: "12px",
+                            position: "fixed",
+                            bottom: "2%",
+                            left: "2%",
+                            zIndex: "20",
+                            bgcolor: "#193d5a",
+                            color: "#fff",
+                            '&:hover': {
+                                color: "#193d5a",
+                                bgcolor: "#fff"
+                            }
+                        }}>
+                        <KeyboardReturnIcon sx={{ fontSize: 35 }} />
+                    </IconButton>
                 </Stack>
             </Stack>
         </>
