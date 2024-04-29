@@ -1528,7 +1528,10 @@ export default function DireitoPrevidenciario() {
                                 bgcolor: "#fff"
                             }
                         }}>
-                        <KeyboardArrowUpIcon sx={{ fontSize: 35 }} />
+                        <KeyboardArrowUpIcon
+                            sx={{
+                                fontSize: 35
+                            }} />
                     </IconButton>
                     <IconButton
                         onClick={() => navigate('/home')}
