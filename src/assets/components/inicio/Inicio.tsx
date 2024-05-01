@@ -22,8 +22,9 @@ export default function Inicio() {
                 backgroundImage: `url(${BGS1})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center bottom',
+                filter: 'brightness(90%)'
             }}
-            height={isTablet ? "80vh" : "70vh"}>
+            height={isTablet ? "90vh" : "70vh"}>
             <Stack
 
                 width="100%"
@@ -158,6 +159,7 @@ export default function Inicio() {
                         fontFamily="Cinzel"
                         fontSize={isTablet ? "52px" : "24px"}
                         ml={2}
+                        lineHeight={isTablet ? "50px" : "26px"}
                         fontWeight="500"
                         color="#193D5A"
                     >
